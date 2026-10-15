@@ -364,6 +364,7 @@ export type Database = {
         }
         Returns: boolean
       }
+      increment_download: { Args: { _note_id: string }; Returns: undefined }
     }
     Enums: {
       app_role: "admin" | "student"
