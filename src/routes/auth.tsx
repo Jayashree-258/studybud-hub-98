@@ -11,6 +11,12 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const Route = createFileRoute("/auth")({
+  beforeLoad: async () => {
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
+    if (session) throw redirect({ to: "/dashboard" });
+  },
   head: () => ({
     meta: [
       { title: "Sign in — Life Saver" },
