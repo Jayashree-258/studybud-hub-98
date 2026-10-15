@@ -40,7 +40,7 @@ function Dashboard() {
   });
 
   useEffect(() => {
-    if (!courseId && courses.length) setCourseId(courses[0].id);
+    if (!courseId && courses.length) setCourseId(courses[0]!.id);
   }, [courses, courseId]);
 
   const { data: semesters = [] } = useQuery({
