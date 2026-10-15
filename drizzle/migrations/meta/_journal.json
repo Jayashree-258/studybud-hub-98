@@ -15,6 +15,13 @@
       "when": 1792078389871,
       "tag": "0001_increment_download_fn",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1792078432986,
+      "tag": "0002_admin_role_management",
+      "breakpoints": true
     }
   ]
 }
